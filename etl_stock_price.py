@@ -83,6 +83,7 @@ with DAG (
     schedule = '30 15 * * *'
 ) as dag:
     target_table = "dev.raw_data.alphavantage_stockprice"
+    api_key = Variable.get("alphavantage_apikey")
     url = Variable.get("url")
     cur = return_snowflake_conn()
 
